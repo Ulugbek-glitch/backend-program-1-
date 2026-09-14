@@ -10,6 +10,5 @@ public class SpringBootDeveloperApplication {
 
         // 스프링 부트 실행.
         SpringApplication.run(SpringBootDeveloperApplication.class, args);
-
     }
 }

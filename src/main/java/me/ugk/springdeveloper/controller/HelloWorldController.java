@@ -1,4 +1,4 @@
-package me.ugk.springdeveloper;
+package me.ugk.springdeveloper.controller;
 
 import org.springframework.web.bind.annotation.*;
 
