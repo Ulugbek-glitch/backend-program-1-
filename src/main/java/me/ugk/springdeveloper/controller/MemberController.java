@@ -6,7 +6,6 @@ import me.ugk.springdeveloper.service.MemberService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -17,7 +16,7 @@ public class MemberController {
 
     // 모든 회원 조회
     // GET http://localhost:8080/api/members
-    @GetMapping("/api/members")
+    @GetMapping("/members")
     public ResponseEntity<List<Member>> getAllMembers() {
         return ResponseEntity.ok(memberService.getAllMembers());
     }
@@ -29,6 +28,5 @@ public class MemberController {
         // 비즈니스 로직 호출
         // return ResponseEntity.ok(memberService.saveMember(member));
         return ResponseEntity.status(HttpStatus.CREATED).body(memberService.saveMember(member));
-
     }
 }

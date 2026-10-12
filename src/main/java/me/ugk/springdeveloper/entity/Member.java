@@ -7,24 +7,20 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import java.util.List;
 
 @Entity
 @Getter
 @NoArgsConstructor
 public class Member {
 
-    @Id // Fixed capitalization
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // Changed to wrapper class Long
+    private Long id;
 
-    @Column(nullable = false)
+    @Column(name="name", nullable = false)
     private String name;
 
-    private String email;
-
-    public Member(String name, String email) {
+    public Member(String name) {
         this.name = name;
-        this.email = email;
     }
 }
